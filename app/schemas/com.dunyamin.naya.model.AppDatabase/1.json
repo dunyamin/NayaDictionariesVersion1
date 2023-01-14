@@ -1,0 +1,46 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a0c1a6948d2e13e3a5e0931d759104eb",
+    "entities": [
+      {
+        "tableName": "MyWords",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`engResource` TEXT, `turResource` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "engResource",
+            "columnName": "engResource",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "turResource",
+            "columnName": "turResource",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a0c1a6948d2e13e3a5e0931d759104eb')"
+    ]
+  }
+}

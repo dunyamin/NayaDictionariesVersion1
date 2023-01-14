@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="2dp"
+    app:cardBackgroundColor="@android:color/holo_orange_dark"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/unit_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/child_item_recycler"
+            android:padding="10dp"
+            android:text="@string/unit_1"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/child_item_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/unit_topic"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="74dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
